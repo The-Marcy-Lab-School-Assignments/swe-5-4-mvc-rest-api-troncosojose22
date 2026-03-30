@@ -33,6 +33,7 @@ module.exports.createTodo = (req, res, next) => {
 
   if (!task) {
     res.status(400).send({ message: 'Invalid Task' });
+    return;
   }
 
   const newTodo = todoModel.create(task);

@@ -33,7 +33,7 @@ module.exports.update = (id, changes) => {
     if (!todo) return null;
 
     todo.isDone = isDone;
-    return todo;
+    return { ...todo };
 }
 
 module.exports.destroy = (id) => {
